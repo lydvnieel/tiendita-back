@@ -42,6 +42,12 @@ public class Brand extends BaseEntity {
         this.name = name;
     }
 
+    public Brand(String name, String registryDate, String description) {
+        this.name = name;
+        this.registryDate = registryDate;
+        this.description = description;
+    }
+
     public String getName() {
         return name;
     }

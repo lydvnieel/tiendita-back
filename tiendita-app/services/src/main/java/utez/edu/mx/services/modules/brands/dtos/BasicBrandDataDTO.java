@@ -1,15 +1,15 @@
 package utez.edu.mx.services.modules.brands.dtos;
 
-public class BrandDTO {
+public class BasicBrandDataDTO {
     private String name;
     private String description;
     private String registryDate;
 
-    public BrandDTO() {
+    public BasicBrandDataDTO() {
 
     }
 
-    public BrandDTO(String name, String description, String registryDate) {
+    public BasicBrandDataDTO(String name, String description, String registryDate) {
         this.name = name;
         this.description = description;
         this.registryDate = registryDate;

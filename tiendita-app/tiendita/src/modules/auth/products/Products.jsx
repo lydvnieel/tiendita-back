@@ -21,7 +21,7 @@ export default function Produts(){
         </section>
 
         <section className="mt-4">
-            <div className="taable-responsive">
+            <div className="table-responsive">
                 <table className="table table-striped table-hover">
                     <thead>
                         <tr>
