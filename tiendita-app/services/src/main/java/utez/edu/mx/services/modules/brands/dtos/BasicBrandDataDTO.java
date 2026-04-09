@@ -1,6 +1,7 @@
 package utez.edu.mx.services.modules.brands.dtos;
 
 public class BasicBrandDataDTO {
+    private Long id;
     private String name;
     private String description;
     private String registryDate;
@@ -9,7 +10,19 @@ public class BasicBrandDataDTO {
 
     }
 
-    public BasicBrandDataDTO(String name, String description, String registryDate) {
+    public BasicBrandDataDTO(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public BasicBrandDataDTO(Long id, String name, String description) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
+
+    public BasicBrandDataDTO(Long id, String name, String description, String registryDate) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.registryDate = registryDate;
@@ -29,6 +42,15 @@ public class BasicBrandDataDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getRegistryDate() {

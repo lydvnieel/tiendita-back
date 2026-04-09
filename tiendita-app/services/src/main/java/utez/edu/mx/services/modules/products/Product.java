@@ -37,4 +37,74 @@ public class Product extends BaseEntity {
     @JsonIgnore
     private List<Bundle> bundles;
 
+    public Product(){
+
+    }
+
+    public Product(Long id, String name, double price, Long stock, boolean onSale, Brand brand, Discount discount, List<Bundle> bundles) {
+        super(id);
+        this.name = name;
+        this.price = price;
+        this.stock = stock;
+        this.onSale = onSale;
+        this.brand = brand;
+        this.discount = discount;
+        this.bundles = bundles;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public Long getStock() {
+        return stock;
+    }
+
+    public void setStock(Long stock) {
+        this.stock = stock;
+    }
+
+    public boolean isOnSale() {
+        return onSale;
+    }
+
+    public void setOnSale(boolean onSale) {
+        this.onSale = onSale;
+    }
+
+    public Brand getBrand() {
+        return brand;
+    }
+
+    public void setBrand(Brand brand) {
+        this.brand = brand;
+    }
+
+    public Discount getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Discount discount) {
+        this.discount = discount;
+    }
+
+    public List<Bundle> getBundles() {
+        return bundles;
+    }
+
+    public void setBundles(List<Bundle> bundles) {
+        this.bundles = bundles;
+    }
 }

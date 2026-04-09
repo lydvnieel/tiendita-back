@@ -27,4 +27,63 @@ public class Discount extends BaseEntity {
     @OneToOne(mappedBy = "discount")
     @JsonIgnore
     private Product product;
+
+    public Discount() {
+    }
+
+    public Discount(String code, double discount, boolean type, boolean active) {
+        this.code = code;
+        this.discount = discount;
+        this.type = type;
+        this.active = active;
+    }
+
+    public Discount(Long id, String code, double discount, boolean type, boolean active, Product product) {
+        super(id);
+        this.code = code;
+        this.discount = discount;
+        this.type = type;
+        this.active = active;
+        this.product = product;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
+
+    public boolean isType() {
+        return type;
+    }
+
+    public void setType(boolean type) {
+        this.type = type;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 }

@@ -28,4 +28,14 @@ public class BrandController {
     public ResponseEntity<ApiResponse> saveBrand(@RequestBody BasicBrandDataDTO dto) {
         return brandService.saveBrand(dto);
     }
+
+    @PutMapping("")
+    public ResponseEntity<ApiResponse> updateBrand(@RequestBody BasicBrandDataDTO dto) {
+        return brandService.updateBrand(dto);
+    }
+
+    @DeleteMapping("")
+    public ResponseEntity<ApiResponse> deleteBrand(@RequestBody BasicBrandDataDTO dto) {
+        return brandService.deleteBrand(dto);
+    }
 }
